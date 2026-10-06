@@ -1,6 +1,7 @@
 #include <iostream> 
-#include "Stack.h"
+#include <stdexcept>
 
+#include "Stack.h"
 
 Stack::Stack()
 {
@@ -15,7 +16,7 @@ Stack::~Stack()
     data = nullptr;
 }
 
-bool Stack::isEmpty()
+bool Stack::isEmpty() const
 {
     return top==0;
 }
@@ -42,10 +43,7 @@ int Stack::pop()
 {
     if (isEmpty())
     {
-        std::cout << "Stack is empty, not possible to pop" << std::endl;
-        delete[] data;
-        data = nullptr;
-        std::exit(1);
+        throw std::out_of_range("Stack is empty, not possible to pop");
     }
     top--;
     int element = data[top];

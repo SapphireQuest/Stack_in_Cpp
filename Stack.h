@@ -11,7 +11,7 @@ class Stack
         Stack();
         ~Stack();
 
-        bool isEmpty();
+        bool isEmpty() const;
         void push(int element);
         int pop();
 };
