@@ -13,7 +13,6 @@ Stack::Stack()
 Stack::~Stack()
 {
     delete[] data;
-    data = nullptr;
 }
 
 bool Stack::isEmpty() const
