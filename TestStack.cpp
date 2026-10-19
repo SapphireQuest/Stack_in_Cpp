@@ -1,7 +1,8 @@
+#include "Stack.h"
+
 #include <iostream>
 #include <stdexcept>
 
-#include "Stack.h"
 
 
 void basic_test()
